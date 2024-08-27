@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <!-- <link href='https://fonts.googleapis.com/css?family=Jua' rel='stylesheet' type="text/css"> -->
 <style>
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        grid-auto-rows: minmax(100px, auto);    
+    }
     .timercontainer{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        grid-column: 2;
+        grid-row: 1;
     }
     .timer{
         background-color: aliceblue;
@@ -13,7 +18,7 @@
         width: auto;
         height: auto;
         font-size: 150px;
-        padding: 20px;
+        padding: 35px;
     }
     button{
         background-color: aliceblue;
@@ -21,9 +26,10 @@
         border-radius: 10px;
         padding: 10px;
         font-size: 40px;
-        margin-top: 0;
-        margin-bottom:auto;
-        margin-right: 30px;
+    }
+    .buttoncontainer{
+        grid-column: 1;
+        grid-row: 1;
     }
 </style>
 <html>
@@ -40,16 +46,25 @@
     <title>Sailing timer</title>
   </head>
   <body>
+    <div class="wrapper">
     
     <div class="timercontainer">
-        <button>Start</button>
         <div class="timer">
             00.00.00
         </div>
         
+    </div>
+
+    <div class="buttoncontainer">
+        <button>Start</button>
+        <button>Start</button>
+        <button>Start</button>
+        <button>Start</button>
 
     </div>
     
+    
+    </div>
     <!-- <p id="info"></p> -->
   </body>
   <script src="./renderer.js"></script>
