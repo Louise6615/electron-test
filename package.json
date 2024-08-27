@@ -4,6 +4,7 @@
   "description": "simulation of the enigma machine",
   "main": "main.js",
   "scripts": {
+    "start":"electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "louise",
